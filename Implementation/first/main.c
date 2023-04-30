@@ -3,10 +3,8 @@
 int climbStairs(int n);
 int main()
 {
-    int n,numberofways=0;
-    numberofways = 1+(n/2);
+    int n;
     scanf("%d",&n);
-    printf("%d\n",numberofways);
     printf("%d\n",climbStairs(n));
 
     return 0;
