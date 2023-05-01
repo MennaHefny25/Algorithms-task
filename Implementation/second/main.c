@@ -1,4 +1,13 @@
 #include <stdio.h>
+int fib(int n);
+int numberOfWays(int s);
+int main()
+{
+	int s;
+    	scanf("%d",&s);
+	printf("Number of ways = %d", numberOfWays(s));
+	return 0;
+}
 int fib(int n)
 {
 	if (n <= 1)
@@ -8,10 +17,4 @@ int fib(int n)
 int numberOfWays(int s)
 {
 	return fib(s + 1);
-}
-int main()
-{
-	int s = 4;
-	printf("Number of ways = %d", numberOfWays(s));
-	return 0;
 }
