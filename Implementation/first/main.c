@@ -5,7 +5,7 @@ int main()
 {
     int n;
     scanf("%d",&n);
-    printf("%d\n",climbStairs(n));
+    printf("Number of ways to climb %d stairs: %d\n", n, climbStairs(n));
 
     return 0;
 }
