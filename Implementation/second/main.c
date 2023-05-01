@@ -1,20 +1,18 @@
 #include <stdio.h>
-int fib(int n);
-int numberOfWays(int s);
-int main()
-{
-	int s;
-    	scanf("%d",&s);
-	printf("Number of ways = %d", numberOfWays(s));
-	return 0;
+
+int numberOfWays(int n) {
+    if (n == 1) {
+        return 1;
+    } else if (n == 2) {
+        return 2;
+    } else {
+        return numberOfWays(n-1) + numberOfWays(n-2);
+    }
 }
-int fib(int n)
-{
-	if (n <= 1)
-		return n;
-	return fib(n - 1) + fib(n - 2);
-}
-int numberOfWays(int s)
-{
-	return fib(s + 1);
+
+int main() {
+    int n;
+    scanf("%d",&n);	
+    printf("Number of ways to climb %d stairs: %d\n", n, numberOfWays(n));
+    return 0;
 }
