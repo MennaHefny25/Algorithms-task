@@ -1,16 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>
-int numberOfWays(int n);
+int fib(int n)
+{
+	if (n <= 1)
+		return n;
+	return fib(n - 1) + fib(n - 2);
+}
+int numberOfWays(int s)
+{
+	return fib(s + 1);
+}
 int main()
 {
-    int n;
-    scanf("%d",&n);
-    printf("%d",numberOfWays(n));
-    return 0;
-}
-int numberOfWays(int n) {
-    if (n == 0 || n == 1) {
-        return 1;
-    }
-    return numberOfWays(n-1) + numberOfWays(n-2);
+	int s = 4;
+	printf("Number of ways = %d", numberOfWays(s));
+	return 0;
 }
